@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+s6-echo "Starting stubby"
+stubby -g -C /config/stubby.yaml
+s6-echo "Starting cloudflared"
+/usr/local/bin/cloudflared --config /config/cloudflared.yaml

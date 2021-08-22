@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+s6-echo "Stopping stubby"
+killall -9 stubby
+s6-echo "Stopping cloudflared"
+killall -9 cloudflared
